@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="header">
+        <div class="container">
+            <img class="logo" src="img/logo.png" alt="logo">
+            <div class="wrapper-inner animate__animated animate__bounceIn">
+                <div class="offer">
+                    <h1 class="offer__title">С помощью нас<br> вы сможете создать то, о чем </h1>
+                    <span class="offer__span">Желаете!</span>
+                    <p class="offer__text">
+                        Наши возможности + опыт позволят Вам достичь огромного успеха.
+                        Мы верим в вас! И знаем это на все 100%.
+                        Вас не остановить!
+                    </p>
+                    <a href="#" class="offer__btn">Узнать больше...</a>
+                </div>
+                <img class="img1" src="img/header-img.png" 
+                alt="header__picture">
+            </div>
+        </div>
+    </div>
+
+    <!--Middle_Section-->
+    <section class="middle_section">
+        <div class="container">
+            
+            <div class="middle_header">
+            <h2 class="middle_title animate__animated animate__fadeIn ">Что Вам необходимо?</h2>
+            </div>
+
+            <div class="blocks"> 
+                <div class="first_block">
+                    <img class="img_block" src="img/f3.png" alt="1-st block_picture">
+                    <h3 class="h3_blocks">
+                        Первый блок
+                    </h3>
+                    <div class="text_on_blocks">Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit</div>
+                </div>
+
+                <div class="second_block">
+                    <img class="img_block" src="img/f4.png" alt="1-st block_picture">
+                    <h3>
+                        Второй блок
+                    </h3>
+                    <div class="text_on_blocks">Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit?</div>
+                </div>
+
+                <div class="third_block">
+                    <img class="img_block" src="img/f5.png" alt="1-st block_picture">
+                    <h3>Третий блок</h3>
+                    <div class="text_on_blocks">Lorem ipsum dolor sit amet 
+                        consectetur adipisicing elit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!--Payment_Section-->
+    <section class="Payment_Section">
+        <form id="form" action="#">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 JSform">
+                        <h4>Order infomation</h4>
+                        <div class="row">
+                            <div class="col-md-4">First Name:</div>
+                            <div class="col-md-4"><input class="form-control" id="name" type="text" onchange="checkName();" required /> </div>
+                            <div class="col-md-4"><span id="checkName"></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">Last Name:</div>
+                            <div class="col-md-4"><input class="form-control" id="fam" type="text" onchange="checkFam();" required /> </div>
+                            <div class="col-md-4"><span id="checkFam"></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">Phone number:</div>
+                            <div class="col-md-4"><input class="form-control" id="number" type="text" onblur="checkPhone();" placeholder="xxx-xxx-xxx" required /></div>
+                            <div class="col-md-4"><span id="checkNumber"></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">Destination:</div>
+                            <div class="col-md-4"><input class="form-control" id="adres" type="text" onblur="checkAdres();" required /></div>
+                            <div class="col-md-4"><span id="adres_check"></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">Date:</div>
+                            <div class="col-md-4">
+                                <input class="form-control" id="date" type="date" required />
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">Pay Method:</div>
+                            <div class="col-md-4">
+                                <select class="form-control" name="paymentmethod" id="paymentmethod" required>
+                                    <option>Money</option>
+                                    <option>Card</option>
+                                    <option>Credit</option>
+                                    <option>SBP</option>
+                                    <option>ApplePay</option>
+                                    <option>MIRPay</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 order"><span id="buton" onclick="outputData();">Отправить</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 Payment_output">
+                        <div class="col-md-12">
+                            <h4>Форма для вывода</h4>
+                            <span id="summary"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form> 
+    </section>
+
+    <!--Form_Section-->
+    <div class="form_section">
+        <div class="container">
+            <div class="form_header">
+                <h2 class="form_title">Форма заказа обратного звонка</h2>
+            </div>
+            <form id="callback-form" action="" method="get">
+                <!-- Окно имени -->
+                <div class="forms_window">
+                    <input type="text" id="fname" name="fname" value=""
+                           placeholder="Имя" required minlength="2" 
+                           pattern="[A-Za-zА-Яа-яЁё\s]+" title="Имя должно содержать только буквы и пробелы">
+                </div>
+                <!-- Окно почты -->
+                <div class="forms_window">
+                    <input type="email" id="ename" name="ename" value=""
+                           placeholder="Введите свой E-mail" required 
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                           title="Введите корректный email (например, example@mail.com)">
+                </div>
+                <!-- Окно телефона -->
+                <div class="forms_window">
+                    <input type="tel" id="tel" name="tel" value=""
+                           placeholder="Телефон" required 
+                           pattern="^\+?[0-9]{10,15}$" 
+                           title="Введите корректный номер телефона (например, +1234567890)">
+                </div>
+                <!-- Окно темы -->
+                <div class="forms_window">
+                    <input type="text" id="theme" name="theme" value=""
+                           placeholder="Какая тема Вас интересует?" required 
+                           minlength="3" title="Тема должна содержать минимум 3 символа">
+                </div>
+                <div class="forms_window">
+                    <!-- Кнопка отправки формы -->
+                    <button type="submit" class="form__btn">Отправить вопрос!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--End_Section-->
+    <footer>
+    <div class="end_section">
+        <div class="end_text">
+            © Все на этом сайте защищено
+        </div>
+    </footer>
+    <script src="js/script.js"> </script>
+</body>
+</html>

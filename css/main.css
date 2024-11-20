@@ -1,0 +1,663 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+}
+
+p {
+	line-height: 1.65em;
+}
+
+.header {
+	background: rgb(0,219,255);
+	background: linear-gradient(90deg, rgba(0,219,255,1) 0%,
+	rgba(0,116,255,1) 90%);
+}
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.wrapper-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+.offer {
+	width: 700px;
+}
+
+.logo{
+	margin-top: 50px;
+}
+
+.offer__title {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 40px;
+	margin-bottom: 20px;
+	width: 500px;
+}
+
+.offer__span {
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 700;
+	font-family: 'Ubuntu', sans-serif ;
+}
+
+.offer__text {
+	font-size: 16px;
+	width: 400px;
+	font-family: 'Ubuntu', sans-serif ;
+	margin-bottom: 30px;
+}
+
+.offer__btn {
+	display: block;
+	width: 220px;
+	height: 55px;
+	background-color: rgb(255, 217, 0);
+	font-weight: bold;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	transition: transform 0.3s ease-in-out;
+}
+
+.img1 {
+	width: 100%;
+	height: 100%;
+}
+
+.middle_section{
+	text-align:    center;
+	margin-top:    0px;
+	margin-bottom: 150px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+.middle_title{
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.blocks{
+	display: flex;
+	justify-content: space-around;
+	align-items: left;
+}
+
+.img_block{
+	margin-bottom: 30px;
+	animation: rotate 1s linear infinite;
+}
+
+.text_on_blocks{
+	margin-top: 15px;
+	width: 300px;
+}
+
+.form_section{
+	padding-top: 100px;
+	background-color: rgb(240, 240, 240);
+	padding-bottom: 50px;
+}
+
+.form_header{
+	text-align:  center;
+	padding-bottom: 50px;
+}
+
+.form_title{
+	animation: move-vertical 5s linear infinite;
+}
+
+.forms_window {
+	display: flex;
+	justify-content: center;
+  }
+
+.forms_window input {
+	margin-bottom: 20px;
+	width: 400px;
+	height: 50px;
+	padding: 10px;
+	padding-left: 30px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+  
+.forms_window .form__btn {
+	width: 400px;
+	height: 50px;
+	background-color: rgb(255, 217, 0);
+	font-weight: bold;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	transition: background-color 0.3s ease,
+	 transform 0.3s ease,
+	box-shadow 0.3s ease;
+}
+
+.end_section{
+	height: 100px;
+	text-align: center;
+	background: rgb(0,219,255);
+background: linear-gradient(177deg, rgba(0,219,255,1) 0%,
+ rgba(0,116,255,1) 90%);
+ 	margin-top: 0px;
+	
+}
+
+.end_text{
+	padding-top: 40px;
+	color: white;
+}
+
+/*Покачивание изображений блоков*/
+@keyframes rotate {
+	0% {
+	  transform: rotate(-25deg);
+	}
+	50% {
+		transform: rotate(25deg);
+	  }
+	100% {
+		transform: rotate(-25deg);
+	  }
+  }
+
+  /*Перемещение вверх-вниз Формы обратного звонка"*/
+  @keyframes move-vertical {
+	0% {
+	  transform: translateY(-50%);
+	}
+	50% {
+	  transform: translateY(50%);
+	}
+	100% {
+	  transform: translateY(-50%);
+	}
+	
+  }
+
+   /* Увеличение размера кнопки "Узнать больше..."*/
+  .offer__btn:hover {
+	transform: scale(1.1);
+  }
+
+  /* Увеличение размера и цвета кнопки "Отправить вопрос!"*/
+	.form__btn:hover{
+		background-color: violet;
+		transform: scale(1.1);
+	}
+	
+/* От 768px до 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+	.container {
+	  width: 100%;
+	  padding: 0 10px;
+	}
+  
+	.header {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.logo {
+	  max-width: 150px; /* Ограничение размера логотипа */
+	}
+
+	.img1 {
+		width: 50%; /* Ограничение ширины изображения */
+		height: 100%; /* Поддержание пропорций изображения */
+		margin-top: 30px; /* Отступ сверху для изображения */
+	  }
+  
+	.wrapper-inner {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 20px 0;
+	}
+  
+	.offer {
+	  max-width: 500px; /* Ограничение ширины блока предложения */
+	  text-align: left;
+	}
+  
+	.offer__title {
+	  font-size: 28px;
+	}
+  
+	.offer__span {
+	  font-size: 32px; /* Увеличенный размер шрифта для выделения */
+	  font-weight: bold;
+	}
+  
+	.offer__text {
+	  font-size: 16px;
+	}
+  
+	.middle_section {
+	  padding: 40px 0;
+	}
+  
+	.middle_title {
+	  font-size: 28px;
+	  text-align: center;
+	}
+  
+	.blocks {
+	  display: flex;
+	  flex-direction: column; /* Блоки по одному в столбец */
+	  align-items: center; /* Центрируем блоки по горизонтали */
+	  gap: 20px; /* Расстояние между блоками */
+	}
+  
+	.first_block, .second_block, .third_block {
+	  width: 100%; /* Занимают всю ширину контейнера */
+	  max-width: 500px; /* Ограничение ширины блока */
+	  text-align: center;
+	  border: 1px solid #ddd; /* Граница блока */
+	  padding: 20px; /* Отступ внутри блока */
+	  border-radius: 10px; /* Закругление углов блока */
+	}
+  
+	.h3_blocks {
+	  font-size: 20px;
+	}
+  
+	.text_on_blocks {
+	  font-size: 14px;
+	}
+  
+	.form_section {
+	  padding: 40px 0;
+	  text-align: center; /* Центрируем заголовок формы */
+	}
+  
+	.form_title {
+	  font-size: 28px;
+	}
+  
+	.forms_window {
+	  margin-bottom: 20px; /* Расстояние между полями ввода */
+	}
+  
+	input {
+	  width: 100%;
+	  padding: 10px;
+	  font-size: 16px;
+	   /* Граница для полей ввода */
+	  border-radius: 5px; /* Закругление углов полей ввода */
+	}
+  
+	.form__btn {
+	  padding: 15px 30px;
+	  display: inline-block;
+	  text-align: center;
+	  margin-top: 10px;
+	  text-decoration: none; /* Убираем подчеркивание у ссылки */
+	  border-radius: 5px; /* Закругление углов кнопки */
+	}
+  
+	footer {
+	  text-align: center;
+	  padding:0;
+	}
+  
+	.end_text {
+	  font-size: 14px;
+	  margin: 0;
+	}
+  }
+  
+/* От 992px до 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.container {
+	  width: 960px; /* Фиксированная ширина контейнера */
+	  margin: 0 auto; /* Центрируем контейнер */
+	}
+  
+	.header {
+	  display: flex;
+	  flex-direction: column; /* Размещаем элементы в колонку */
+	  align-items: center; /* Центрируем элементы по горизонтали */
+	}
+  
+	.logo {
+	  max-width: 180px; /* Ограничение размера логотипа */
+	  margin-bottom: 20px; /* Отступ снизу для логотипа */
+	}
+  
+	.wrapper-inner {
+	  display: flex;
+	  flex-direction: row; /* Элементы в строку */
+	  justify-content: center; /* Центрируем по горизонтали */
+	  align-items: flex-start; /* Вертикальное выравнивание по верхнему краю */
+	  width: 100%; /* Занимаем всю ширину */
+	}
+  
+	.offer {
+	  max-width: 500px; /* Ограничение ширины блока предложения */
+	  text-align: left; /* Выравнивание текста по левому краю */
+	  margin-right: 20px; /* Отступ справа для блока предложения */
+	}
+  
+	.img1 {
+	  width: 50%; /* Ограничение ширины изображения */
+	  height: 100%; /* Поддержание пропорций изображения */
+	  margin-top: 30px; /* Отступ сверху для изображения */
+	}
+  
+	.offer__title {
+	  font-size: 32px; /* Увеличенный размер заголовка */
+	}
+  
+	.offer__span {
+	  font-size: 36px; /* Увеличенный размер текста выделения */
+	}
+  
+	.offer__text {
+	  font-size: 18px; /* Увеличенный размер текста */
+	}
+  
+	.offer__btn {
+	  padding: 15px 40px; /* Увеличенные отступы кнопки */
+	}
+  
+	.middle_section {
+	  padding: 50px 0; /* Увеличенные отступы секции */
+	  text-align: center; /* Центрируем заголовок секции */
+	}
+  
+	.middle_title {
+	  font-size: 32px; /* Увеличенный размер заголовка секции */
+	}
+  
+	.blocks {
+	  display: flex;
+	  flex-direction: column; /* Блоки по одному в столбец */
+	  align-items: center;
+	  gap: 30px; /* Увеличенное расстояние между блоками */
+	}
+  
+	.first_block, .second_block, .third_block {
+	  width: 100%; /* Занимают всю ширину контейнера */
+	  max-width: 600px; /* Ограничение ширины блока */
+	  text-align: center;
+	  border: 1px solid #ddd; /* Граница блока */
+	  padding: 30px; /* Увеличенные отступы внутри блока */
+	  border-radius: 10px; /* Закругление углов блока */
+	}
+  
+	.h3_blocks {
+	  font-size: 24px; /* Увеличенный размер заголовка блока */
+	}
+  
+	.text_on_blocks {
+	  font-size: 16px; /* Увеличенный размер текста */
+	}
+  
+	.form_section {
+	  padding: 50px 0; /* Увеличенные отступы секции формы */
+	  text-align: center; /* Центрируем заголовок формы */
+	}
+  
+	.form_title {
+	  font-size: 32px; /* Увеличенный размер заголовка формы */
+	}
+  
+	.forms_window {
+	  margin-bottom: 25px; /* Увеличенное расстояние между полями ввода */
+	}
+  
+	input {
+	  width: 100%;
+	  padding: 15px; /* Увеличенные отступы полей ввода */
+	  font-size: 16px; /* Размер шрифта полей ввода */
+	  border-radius: 5px; /* Закругление углов полей ввода */
+	}
+  
+	.form__btn {
+	  padding: 15px 40px; /* Увеличенные отступы кнопки */
+	}
+  
+	footer {
+	  text-align: center;
+	}
+  
+	.end_text {
+	  font-size: 16px; /* Увеличенный размер текста футера */
+	}
+  }
+  
+
+
+
+.Payment_Section
+{
+    margin: auto;
+    width: 100%;
+    min-height: 100px;
+    padding-top: 50px;
+    padding: 10px;
+}
+
+input:invalid:required
+{
+	border: 1px solid rgb(247, 222, 2);
+}
+
+#buton {
+    width: 200px;
+    height: 60px;
+    background-color: rgb(248, 190, 0);
+	border: 1px solid rgb(0, 237, 245);
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+
+#form
+{
+    width: 100%;
+    margin: auto;
+}
+
+#buton:hover
+{
+    cursor: pointer;
+}
+
+.Payment_Section
+{
+    margin: auto;
+    width: 100%;
+    min-height: 100px;
+    padding-top: 50px;
+    padding: 10px;
+}
+
+.Payment_output
+{
+    padding: 10px;
+}
+
+.row
+{
+    margin: 10px 10px;
+}
+
+/* От 768px до 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+	.Payment_Section {
+	  padding: 20px;
+	}
+  
+	.container {
+	  width: 100%;
+	  padding: 0 10px;
+	}
+  
+	.row {
+	  display: flex;
+	  flex-wrap: wrap;
+	  margin-bottom: 20px;
+	}
+  
+	.col-md-4 {
+	  width: 100%; /* На мобильных устройствах и планшетах каждая колонка будет занимать всю ширину */
+	  margin-bottom: 10px;
+	}
+  
+	.col-md-8 {
+	  width: 100%; /* Уменьшаем ширину формы для мобильных устройств */
+	}
+  
+	.col-md-12 {
+	  width: 100%; /* Секции с шириной 100% для обеспечения их правильного отображения */
+	}
+  
+	.form-control {
+	  width: 100%; /* Поля ввода занимают всю ширину */
+	  padding: 10px;
+	  font-size: 14px;
+	}
+  
+	.order {
+	  text-align: center;
+	}
+  
+	#buton {
+	  display: inline-block;
+	  padding: 10px 20px;
+	  background-color: #4CAF50;
+	  color: white;
+	  font-size: 16px;
+	  text-align: center;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  transition: background-color 0.3s ease;
+	}
+  
+	#buton:hover {
+	  background-color: #45a049;
+	}
+  
+	.Payment_output {
+	  margin-top: 20px;
+	}
+  
+	.Payment_output h4 {
+	  text-align: center;
+	  font-size: 18px;
+	}
+  
+	.Payment_output span {
+	  display: block;
+	  text-align: center;
+	  font-size: 14px;
+	  margin-top: 10px;
+	}
+  
+	/* Для вывода секции формы */
+	.row .col-md-4 {
+	  padding: 5px;
+	}
+  }
+  
+  /* От 992px до 1199px */
+  @media (min-width: 992px) and (max-width: 1199px) {
+	.Payment_Section {
+	  padding: 40px;
+	}
+  
+	.container {
+	  width: 960px; /* Центрируем контейнер */
+	  margin: 0 auto;
+	}
+  
+	.row {
+	  display: flex;
+	  flex-wrap: wrap;
+	  margin-bottom: 20px;
+	}
+  
+	.col-md-4 {
+	  width: 33.33%; /* Разделяем колонки на 3 части */
+	  padding: 10px;
+	}
+  
+	.col-md-8 {
+	  width: 66.66%; /* Увеличиваем ширину формы */
+	}
+  
+	.form-control {
+	  width: 100%;
+	  padding: 12px;
+	  font-size: 16px;
+	}
+  
+	#buton {
+	  display: inline-block;
+	  padding: 15px 30px;
+	  background-color: #4CAF50;
+	  color: white;
+	  font-size: 18px;
+	  text-align: center;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  transition: background-color 0.3s ease;
+	}
+  
+	#buton:hover {
+	  background-color: #45a049;
+	}
+  
+	.Payment_output {
+	  margin-top: 20px;
+	}
+  
+	.Payment_output h4 {
+	  text-align: center;
+	  font-size: 22px;
+	}
+  
+	.Payment_output span {
+	  display: block;
+	  text-align: center;
+	  font-size: 16px;
+	  margin-top: 10px;
+	}
+  }
+
+
